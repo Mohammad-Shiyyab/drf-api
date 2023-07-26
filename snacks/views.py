@@ -8,10 +8,12 @@ from .serializers import ThingSerializer
 
 
 class ThingListView(ListCreateAPIView):
+    
     queryset = Thing.objects.all()
     serializer_class = ThingSerializer
 
 
 class ThingDetailView(RetrieveUpdateDestroyAPIView):  
     queryset = Thing.objects.all()
+
     serializer_class = ThingSerializer  
